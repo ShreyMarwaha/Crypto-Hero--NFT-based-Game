@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BATTLE MANIA</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<div class="banner">
+		<video autoplay loop muted>
+			<source src="vortex.mp4" type="video/mp4">
+		</video>
+
+		<div class="left">
+			<h2>PLAYER 1</h2>
+			<input type="text" id="dam1" placeholder="DAMAGE"><br>
+			<input type="text" id="def1" placeholder="DEFENSE"><br>
+			<input type="text" id="h1" placeholder="HEALTH"><br>
+		</div>
+		<button onclick="compute()"> FIGHT </button>
+		<div class="right">
+			<h2>PLAYER 2</h2>
+			<input type="text" id="dam2" placeholder="DAMAGE"><br>
+			<input type="text" id="def2" placeholder="DEFENSE"><br>
+			<input type="text" id="h2" placeholder="HEALTH"><br>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
