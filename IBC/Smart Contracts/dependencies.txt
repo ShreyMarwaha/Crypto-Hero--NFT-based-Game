@@ -1,3 +1,0 @@
-npm install --save solc
-npm install --save mocha ganache-cli web3@1.0.0-beta.26
-//Web3 v0.x.x (primitive interface - only callbacks for async code), v1.x.x (support promises + async/await)

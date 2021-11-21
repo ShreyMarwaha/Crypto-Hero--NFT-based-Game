@@ -1,5 +1,5 @@
-const Color = artifacts.require("Color");
+const Migrations = artifacts.require("Migrations");
 
 module.exports = function(deployer) {
-	deployer.deploy(Color);
+  deployer.deploy(Migrations);
 };
