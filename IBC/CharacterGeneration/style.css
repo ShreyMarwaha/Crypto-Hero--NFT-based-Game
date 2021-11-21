@@ -1,0 +1,18 @@
+.container {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;;
+  background-color: dimgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.2s;
+}
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  transition: all ease-in-out 0.2s;
+}
