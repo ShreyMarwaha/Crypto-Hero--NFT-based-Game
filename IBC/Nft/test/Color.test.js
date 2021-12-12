@@ -1,16 +1,20 @@
 const { assertScopable } = require("@babel/types");
 const { assert } = require("chai");
 
+//artifact is abi/color.json
 const Color = artifacts.require("./Color.sol");
 
 require("chai")
     .use(require("chai-as-promised"))
     .should();
+
 contract("Color", (accounts) => {
     let contract;
     before(async () => {
-        contract = await Color.deployed();
+        //getting a deployed copy of smart contract from the blockchain
+        contract = await Color.deployed(); //returns a promise
     });
+
     describe("*Deployment", async () => {
         it("deplpys successfully", async () => {
             const address = contract.address;
@@ -25,6 +29,7 @@ contract("Color", (accounts) => {
             const name = await contract.name();
             assert.equal(name, "Color");
         });
+
         it("has a symbol", async () => {
             const symbol = await contract.symbol();
             assert.equal(symbol, "COLOR");
@@ -34,11 +39,16 @@ contract("Color", (accounts) => {
     describe("*Minting", async () => {
         it("creates a new token", async () => {
             const result = await contract.mint("#EC058E");
-            const totalSupply = await contract.totalSupply();
+            const totalSupply = await contract.totalSupply(); //returns total numnber of tokens present
+
             //SUCCESS
             assert.equal(totalSupply, 1);
             const event = result.logs[0].args;
-            assert.equal(event.tokenId.toNumber(), 1, "id is correct");
+            assert.equal(
+                event.tokenId.toNumber(),
+                totalSupply,
+                "id is correct"
+            );
             assert.equal(
                 event.from,
                 "0x0000000000000000000000000000000000000000",
@@ -46,7 +56,7 @@ contract("Color", (accounts) => {
             );
             assert.equal(event.to, accounts[0], "to is correct");
 
-            //FAILURE
+            //FAILURE: cannont mint same color twice
             await contract.mint("#EC058E").should.be.rejected;
         });
     });
