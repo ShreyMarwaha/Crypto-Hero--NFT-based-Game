@@ -1,8 +1,198 @@
 /* Styles go here */
-.token {
+/* .token {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     display: inline-block;
     background-color: #000;
+} */
+.b {
+    opacity: 0;
+}
+
+.a:hover .b {
+    opacity: 1;
+}
+.a:hover {
+    filter: drop-shadow(0mm 0mm 3mm rgba(0, 0, 0, 0.4));
+}
+.heroHex {
+    font-weight: bold;
+}
+
+.error {
+    border: 1px solid;
+    margin: 10px auto;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    max-width: 460px;
+    color: #d8000c;
+    background-color: #ffbaba;
+    background-image: url("https://i.imgur.com/GnyDvKN.png");
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.blob-btn {
+    z-index: 1;
+    position: relative;
+    padding: 20px 46px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #5d3fd3;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.blob-btn:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #5d3fd3;
+    border-radius: 30px;
+}
+.blob-btn:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+}
+.blob-btn:hover {
+    color: #ffffff;
+    border-radius: 30px;
+}
+.blob-btn:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+.blob-btn__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+}
+.blob-btn__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+}
+.blob-btn__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: #5d3fd3;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+    .blob-btn__blob {
+        transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+}
+.blob-btn__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+    .blob-btn:hover .blob-btn__blob {
+        transform: translateZ(0) scale(1.4);
+    }
+}
+
+.btn-9 {
+    background: #d22b2bbe;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 7px 0px #811331;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+    padding: 15px 15px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin: 15px;
+    margin-right: 100px;
+    width: 200px;
+}
+
+.btn-9:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #811331;
+    transition: all 0.2s;
+}
+
+.btn-10 {
+    background: #0000ffc4;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 7px 0px #00008b;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+    padding: 15px 15px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin: 15px;
+    margin-left: 100px;
+    width: 200px;
+}
+
+.btn-10:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #00008b;
+    transition: all 0.2s;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    color: rgba(245, 245, 245, 0.774);
 }
