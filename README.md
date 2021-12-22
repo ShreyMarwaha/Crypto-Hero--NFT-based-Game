@@ -6,7 +6,7 @@
 ##### Shrey Marwha | 2019334
 
 ## Description
-Crypto Bots is an online Non-Fungible Token based card collection and PvE battle game.
+Crypto Bots is an online Non-Fungible Token based card collection and PvE battle game. Developed using Solidity with React frontend.
 
 ## Goal
 Every new player starts with minting their first NFT. Each NFT has a randomised color, and randomised stats. There is always only one Hero card of any one color (Hex value).
