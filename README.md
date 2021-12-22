@@ -1,4 +1,4 @@
-# Crypto Bots
+# Crypto Hero
  
 ## Team - 68
 ##### Arnav Gupta  | 2019299
@@ -15,4 +15,5 @@ Each player has a limit of 30 NFT Hero cards. After reaching this limit, the pla
 The goal of the game is to create the most aesthetical and powerful army of 30 Hero cards.
 
 ## Presentation
-https://docs.google.com/presentation/d/1gLkoLbgot6mAqBBInuNZMjhKbXEPjnJx59mAB0ot2Es/edit?usp=sharing
+PPT: https://docs.google.com/presentation/d/1gLkoLbgot6mAqBBInuNZMjhKbXEPjnJx59mAB0ot2Es/edit?usp=sharing
+Video: https://youtu.be/a1k_Hwbtnu0
