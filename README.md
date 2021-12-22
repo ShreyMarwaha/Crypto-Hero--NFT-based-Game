@@ -1,9 +1,9 @@
 # Crypto Bots
  
 ## Team - 68
-### Arnav Gupta  | 2019299
-### Ritik Vatsal | 2019321
-### Shrey Marwha | 2019334
+#### Arnav Gupta  | 2019299
+#### Ritik Vatsal | 2019321
+#### Shrey Marwha | 2019334
 
 ## Description
 Crypto Bots is an online Non-Fungible Token based card collection and PvE battle game.
